@@ -95,7 +95,7 @@ export default {
   },
   methods: {
     submitForm(formName) {
-      this.$refs[formName].validate((valid) => {
+      this.$refs[formName].validate(valid => {
         if (valid) {
           this.$emit('addUser', this.ruleForm);
           this.dialogVisible = false;

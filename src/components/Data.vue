@@ -49,20 +49,20 @@ export default {
   computed: {
     tableDataChildren() {
       const tableData = this.tableData
-        .map((elem) => Object.assign(elem, { children: [] }))
+        .map(elem => Object.assign(elem, { children: [] }))
         .sort((a, b) => (a.level < b.level ? 1 : -1));
 
       const res = tableData.slice();
 
-      tableData.forEach((user) => {
-        res.forEach((item) => {
+      tableData.forEach(user => {
+        res.forEach(item => {
           if (user.parentId === item.id) {
             item.children.push(user);
           }
         });
       });
 
-      return res.filter((node) => node.level === 1);
+      return res.filter(node => node.level === 1);
     }
   }
 };
