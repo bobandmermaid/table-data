@@ -3,6 +3,7 @@
 > A Vue.js test project
 
 ### Стек
+`JavaScript`    
 `Vue`    
 `CSS`    
 `HTML`    
